@@ -1,0 +1,112 @@
+import numpy as np
+#create an array from a list
+#method_1
+my_list=[1,2,3,4,5,6]
+arr=np.array(my_list)
+print(arr)
+#method_2
+a=np.array([1,2,3,4,5,6])
+print(a)
+#arange
+print(np.arange(10))
+print(np.arange(0,10))
+print(np.arange(10,50,5))
+#.zeros
+print(np.zeros(10,dtype=int))
+print(np.zeros((2,2),dtype=int))
+print(np.zeros((5,7),dtype=int))
+#.ones
+print(np.ones(5,dtype=int))
+print(np.ones((2,2),dtype=int))
+print(np.ones((5,5),dtype=int))
+#identity matrix
+print(np.eye(4,dtype=int))
+#reshape
+#method_1
+resp=np.arange(12)
+resp=resp.reshape(3,4)
+print(resp)
+#method_2
+resp2=np.arange(12).reshape(4,3)
+print(resp2)
+#flatten an array by .ravel
+f1=np.array([[1,2,3],[3,4,5]])
+flattened=np.ravel(f1)
+print(flattened)
+#transpose
+tr=np.array([[1,2,3],[4,5,6]])
+transposed=np.transpose(tr)
+print(transposed)
+#stacking
+a1=np.array([1,2,3])
+b1=np.array([4,5,6])
+stacked=np.vstack([a1,b1])
+print(stacked)
+#adding an elemet to all the elements in the array
+ad=np.array([1,2,3,4])
+added=np.add(ad,1)
+print(added)
+#squaring the elements of an array
+sq=np.array([1,2,3,4])
+squared=np.power(sq,2)
+print(squared)
+#square_root of each element
+sv=np.array([4,9,16,25])
+sq_v=np.sqrt(sv)
+print(sq_v)
+#dot_product
+ar1=np.array([1,2,3])
+ar2=np.array([1,2,3])
+dp=np.dot(ar1,ar2)
+print(dp)
+#mean
+mn=np.array([1,2,3,4,5,6])
+meen=np.mean(mn)
+st_d=np.std(mn)
+print(meen)
+print(st_d)
+print(np.min(mn))
+print(np.max(mn))
+#creation of a matrix
+ma_t=np.array([[1,2],[3,4]])
+print(ma_t)
+#random
+print(np.random.randint(5))
+print(np.random.randint(5,10))
+print(np.random.randint(5,10,6))
+print(np.random.randint(1,2,(4,4)))
+#all
+bo=np.array([1,1,1,1])
+ch=np.all(bo)
+print(ch)
+#any
+bo2=np.array([0,0,0,1])
+ch2=np.any(bo2)
+print(ch2)
+#intersection
+set_1=np.array([1,3,5,7])
+set_2=np.array([2,3,6,7])
+intersexan=np.intersect1d(set_1,set_2)
+unian=np.union1d(set_1,set_2)
+print(intersexan)
+print(unian)
+#shape,size,dimension,dtype
+a=np.array([[1,2,3],[4,5,6],[7,8,9]])
+sape=a.shape
+dimensan=a.ndim
+saiz=a.size
+d_type=a.dtype
+print(sape)
+print(dimensan)
+print(d_type)
+print(saiz)
+#copying an array
+co=np.array([1,2,3,4])
+cop=np.copy(co)
+print(cop)
+#size of array in bytes
+s_ize=co.nbytes
+print(s_ize)
+#shares_memory
+sha_red=np.shares_memory(co,cop)
+print(sha_red)
