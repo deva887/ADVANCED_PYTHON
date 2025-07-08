@@ -29,7 +29,7 @@ print(resp)
 #method_2
 resp2=np.arange(12).reshape(4,3)
 print(resp2)
-#flatten an array by .ravel
+#flatten an array by .ravel==merges the two arrays, duplicates are allowed
 f1=np.array([[1,2,3],[3,4,5]])
 flattened=np.ravel(f1)
 print(flattened)
